@@ -26,6 +26,10 @@ s3_client = boto3.client(
 )
 
 @app.head("/")
+def read_root_head():
+    return {"Hello": "World"}
+
+@app.get("/")
 def root():
     return {"message": "Hello World"}
 
