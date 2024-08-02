@@ -25,7 +25,7 @@ s3_client = boto3.client(
     aws_secret_access_key=supabae_storage_secret_acesss_key # This corresponds to `forcePathStyle: true`
 )
 
-@app.get("/")
+@app.head("/")
 def root():
     return {"message": "Hello World"}
 
